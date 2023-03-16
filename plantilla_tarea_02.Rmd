@@ -192,7 +192,7 @@ data_poli <- dplyr::slice_sample(data_poli_full, prop = .5, by = comu)
 - **Respuesta**
   - `#....indicar su respuesta en las siguientes lineas, y borre el presente comentario`
 
-## Ejercicio 10. Contigencia
+## Ejercicio 10. Tabla de Contingencia
 
 - Similares a las expectativas anterioes, se plantea que la prevalencia de depresión es mayor en mujeres. Calcule una tabla de contigencia donde se obtenga la proporción de mujeres y de hombres respectivamente.
 
