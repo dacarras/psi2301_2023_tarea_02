@@ -16,7 +16,7 @@ output:
 
 - Los datos que vamos a emplear son una versión recortada de los datos y con nombres adaptados, que se espera sean más amigables.
 
-- El link para cargar los datos, es el siguiente
+- El archivo que contiene los datos que vamos a emplear se llama:
 
 ```
 
@@ -107,7 +107,7 @@ data_poli <- dplyr::slice_sample(data_poli_full, prop = .5, by = comu)
 
 ## Ejercicio 4. Visualizar distribución de puntajes
 
-- La variable `dep`, tiene los puntajes de depresión de la escala de Escala de Detección Depresión Infantil de Birleson (EDIB) (Birleson et al., 1987). Esta escala varía de 0 a 36 puntos. En Chile, se emplea como punto de corte a los 19 puntos. Con este criterio, se indica que personas jóvenes con 19 o más puntos podrían tener depresión.
+- La variable `dep`, tiene los puntajes de depresión de la escala de Escala de Detección Depresión Infantil de Birleson (EDIB) (Birleson et al., 1987). Esta escala varía de 0 a 36 puntos. En Chile, se emplea como punto de corte a los 19 puntos (MINSAL, 2013). Con este criterio, se indica que personas jóvenes con 19 o más puntos podrían tener depresión.
 
 - Empleando Genere un histograma de los puntajes de depresion observados.
 
@@ -146,17 +146,22 @@ data_poli <- dplyr::slice_sample(data_poli_full, prop = .5, by = comu)
 
 ## Ejercicio 7. Interpretacion de percentiles.
 
-- Considerando los resultados anteriores. Aproximadamente, ¿cuántos jóvenes podrían tener depresión?
+- **¿Qué tipo de distribución observa?** Indique en su respuesta si es una distribución simétrica o asimétrica, y si se observa una una asimetria, indique si esta es positiva o negativa.
+
+- **Respuesta**
+  - `#....indicar su respuesta en esta línea, y borrar este comentario.`
 
 ## Ejercicio 8. Recodificación y Proporción.
 
 - **¿Qué proporción de casos tiene depresión?**
 
-- Empleando al valor 19 como criterio de corte clasifique a todos los casos con y sin depresion.
+- Empleando al valor 19 como criterio de corte clasifique a todos los casos con y sin depresión.
 
 - Para estos fines, genere una variable *dummy*, donde el valor 1 indique depresion (puntajes mayor o igual a 19 puntos), y el valor indique sin depresiones (puntajes menores a 19).
 
-- Una vez realizada la recodificación, calcule la proporción de casos en cada categoria.
+- Se sugiere llamar a la variable creada `dep_d`
+
+- Una vez realizada la recodificación, calcule la proporción de casos en cada categoría.
 
 - Finalmente, reporte los resultados encontrados en texto, bajo el código generado.
 
@@ -189,7 +194,9 @@ data_poli <- dplyr::slice_sample(data_poli_full, prop = .5, by = comu)
 
 ## Ejercicio 10. Contigencia
 
-- Similares a las expectativas anterioes, se plantea que la prevalencia de depresión es mayor en mujeres. Calcule una tabla de contigencia, donde se obtenga la proporción de mujeres y de hombres, respectivamente, que se encuentra por sobre el puntaje de corte empleado en Chile (19 puntos o más).
+- Similares a las expectativas anterioes, se plantea que la prevalencia de depresión es mayor en mujeres. Calcule una tabla de contigencia donde se obtenga la proporción de mujeres y de hombres respectivamente.
+
+- Emplee la variable creada en el ejercicio 8, la cual clasifica a los casos con o sin riesgo de depresión, empleando el puntaje de corte emmpleado en Chile (19 puntos o más).
 
 ```{r}
 
